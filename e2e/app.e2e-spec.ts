@@ -5,10 +5,10 @@ describe('ng-course App', function() {
 
   beforeEach(() => {
     page = new NgCoursePage();
-  })
+  });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('ng-course works!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
