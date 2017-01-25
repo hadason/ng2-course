@@ -4,8 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-todo-main',
   template: `
     <section class="main">
-      <app-todo-toggle></app-todo-toggle>
-      <app-todo-items></app-todo-items>
+      <ng-content></ng-content>
     </section>
   `,
   styles: []

@@ -16,6 +16,8 @@ import {Component} from "@angular/core";
   template:
     `
     <app-todo-app></app-todo-app>
+    <app-todo-app></app-todo-app>
+    <app-todo-app></app-todo-app>
     `,
   styles: ['h1 {color: purple}']
 })
@@ -27,3 +29,4 @@ export class AppComponent {
     this._title = 'Hello Viventium';
   }
 }
+

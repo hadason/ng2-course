@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
+import {EventEmitter} from "@angular/common/src/facade/async";
 
 @Component({
   selector: 'app-todo-toggle',

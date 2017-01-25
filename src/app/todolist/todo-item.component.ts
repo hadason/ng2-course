@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
+import {Item} from "./todolist.service";
 
 @Component({
   selector: 'app-todo-item',
   template: `
-    <li>
-      <div class="view">
-        <input class="toggle"
+    <li [class.completed]="item.done">
+      <div appMarker class="view">
+        <input class="toggle" [(ngModel)]="item.done" 
                type="checkbox">
   
-        <label>Todo Tittle</label>
+        <label appMarker>{{item.title | upper}}</label>
 
-        <button class="destroy"></button>
+        <button appMarker class="destroy" (click)="remove()"></button>
   
       </div>
   
@@ -20,6 +21,9 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class TodoItemComponent implements OnInit {
+
+  @Input() private item: Item;
+  @Output() remove = new EventEmitter();
 
   constructor() { }
 
